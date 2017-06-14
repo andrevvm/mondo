@@ -1,19 +1,6 @@
-@font-face {
-  font-family: 'UniversLTStd-XBlackEx';
-  src: url('../fonts/subset-UniversLTStd-XBlackEx.eot');
-  src: url('../fonts/subset-UniversLTStd-XBlackEx.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/subset-UniversLTStd-XBlackEx.woff2') format('woff2'),
-    url('../fonts/subset-UniversLTStd-XBlackEx.woff') format('woff'),
-    url('../fonts/subset-UniversLTStd-XBlackEx.ttf') format('truetype'),
-    url('../fonts/subset-UniversLTStd-XBlackEx.svg#UniversLTStd-XBlackEx') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 body {
-  color: black;
-  font-family: 'UniversLTStd-XBlackEx', 'Univers', -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
@@ -38,7 +25,7 @@ a {
 }
 
 #mondo {
-  perspective: 1vw;
+  perspective: 2.5vw;
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -55,9 +42,9 @@ a {
     top: 0;
     width: 100%;
     height: 8vh;
-    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 15%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    background-size: 100%;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    background-size: 100%;
     z-index: 10;
   }
 }
@@ -66,27 +53,24 @@ a {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   width: 100%;
-  transform: rotateX(-50deg);
 }
 
 #scroller {
-  height: 20000vh;
+  height: 24000vh;
 }
 
 img,
-.mondo_1,
-.mondo_2 {
+.mondo_1 {
   position: absolute;
   left: 50%;
   top: 0;
   transform: translate3d(-1000%,0,0) scale3d(1,1,1) rotateZ(90deg) rotateY(-20deg);
   transform-origin: center;
-  width: 100%;
-  height: 100vh;
+  width: 400vh;
+  height: 400vh;
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   outline: 1px solid transparent;
-  font-size: 70vh;
-  line-height: 1.7em;
+  font-size: 100vh;
   -webkit-font-smoothing: antialiased;
 }
