@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20161013 at Wed Jun  5 20:46:21 2002
+ By ,,,
+Copyright (c) 1990, 1999, 2002 Adobe Systems Incorporated.  All Rights Reserved. (c) 1981, 1999, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+</metadata>
+<defs>
+<font id="UniversLTStd-XBlackEx" horiz-adv-x="1062" >
+  <font-face 
+    font-family="Univers LT Std 93 XBlk Ext"
+    font-weight="950"
+    font-stretch="expanded"
+    units-per-em="1000"
+    panose-1="2 11 10 7 4 5 2 3 2 4"
+    ascent="724"
+    descent="-276"
+    cap-height="741"
+    bbox="0 -19 1303 741"
+    underline-thickness="50"
+    underline-position="-200"
+    unicode-range="U+0020-004F"
+  />
+<missing-glyph horiz-adv-x="500" 
+d="M0 0v700h500v-700h-500zM250 395l170 255h-340zM280 350l170 -255v510zM80 50h340l-170 255zM50 605v-510l170 255z" />
+    <glyph glyph-name=".notdef" horiz-adv-x="500" 
+d="M0 0v700h500v-700h-500zM250 395l170 255h-340zM280 350l170 -255v510zM80 50h340l-170 255zM50 605v-510l170 255z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="333" 
+ />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="420" 
+ />
+    <glyph glyph-name="D" unicode="D" 
+d="M393 558v-394h84q106 0 163.5 49t57.5 148t-57.5 148t-163.5 49h-84zM89 0v722h387q174 0 277 -24t173 -95q88 -90 88 -248q0 -81 -26 -151.5t-72 -107.5q-67 -54 -147 -75t-241 -21h-439z" />
+    <glyph glyph-name="M" unicode="M" horiz-adv-x="1383" 
+d="M80 0v722h461l151 -484h2l146 484h463v-722h-282v543h-2l-198 -543h-294l-186 543h-3v-543h-258z" />
+    <glyph glyph-name="N" unicode="N" horiz-adv-x="1111" 
+d="M78 0v722h445l243 -484h3v484h264v-722h-431l-258 514h-2v-514h-264z" />
+    <glyph glyph-name="O" unicode="O" 
+d="M1014 361q0 -166 -94 -255q-130 -125 -389 -125q-251 0 -367 103t-116 277q0 201 139 300q56 40 134 60t210 20q251 0 367 -103t116 -277zM704 361q0 107 -47 161.5t-126 54.5t-126 -54.5t-47 -161.5t47 -161.5t126 -54.5t126 54.5t47 161.5z" />
+  </font>
+</defs></svg>
