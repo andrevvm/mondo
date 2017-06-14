@@ -47,6 +47,7 @@ a {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   transform-origin: center;
+  transform: translate3d(0,0,0);
 
   &:after {
     content: "";
@@ -66,7 +67,7 @@ a {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   width: 100%;
-  transform: rotateX(-50deg);
+  transform: rotateX(-70deg);
 }
 
 #scroller {
@@ -86,7 +87,7 @@ img,
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   outline: 1px solid transparent;
-  font-size: 70vh;
-  line-height: 1.7em;
+  font-size: 80vh;
+  line-height: 1.525em;
   -webkit-font-smoothing: antialiased;
 }

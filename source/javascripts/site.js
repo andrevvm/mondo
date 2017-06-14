@@ -31,8 +31,8 @@ function loop() {
     var rotate = 70 * per;
     var y = -100 * per;
 
-    img.style.transform = "translate3d(-50%,"+(-y + 20)+"vh,"+(200 - minus)+"vh) scale3d(8,1,1) rotateZ(90deg) rotateY(-90deg)";
-    img2.style.transform = "translate3d(-50%,"+(-y)+"vh,"+(640 - minus)+"vh) scale3d(8,1,1) rotateZ(90deg) rotateY(-90deg)";
+    img.style.transform = "translate3d(-50%,"+(-y + 20)+"vh,"+(280 - minus)+"vh) scale3d(8,1,1) rotateZ(90deg) rotateY(-90deg)";
+    img2.style.transform = "translate3d(-50%,"+(-y)+"vh,"+(720 - minus)+"vh) scale3d(8,1,1) rotateZ(90deg) rotateY(-90deg)";
 
     loop();
   });
