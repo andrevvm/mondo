@@ -8,19 +8,24 @@
     url('../fonts/subset-UniversLTStd-XBlackEx.svg#UniversLTStd-XBlackEx') format('svg');
   font-weight: normal;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
+
 }
 
+$mondo-font: 'UniversLTStd-XBlackEx', 'Univers', -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", sans-serif;
+
+$normal-font: "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", sans-serif;
 
 body {
   color: black;
-  font-family: 'UniversLTStd-XBlackEx', 'Univers', -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  font-family: $normal-font;
   padding: 0;
   margin: 0;
   text-align: center;
-  cursor: default;
+  cursor: url(../images/cursor.png) 16 16, s-resize;
+  background-color: white;
 }
 
 ::-moz-selection {
@@ -34,30 +39,33 @@ body {
 } 
 
 ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+    //width: 0px;  /* remove scrollbar space */
+    //background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
+  color: black;
+  cursor: url(../images/cursor_hover.png) 16 16, pointer;
   &:hover {
-    color: rgba(#000, 0.6);
+    color: red;
   }
 }
 
 #mondo {
-  perspective: 1vw;
+  perspective: 0.75vw;
   position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
   height: 0;
   -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+  //-webkit-backface-visibility: hidden;
   transform-origin: center;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0) rotate3d(0deg,0deg,0deg);  
+
+  @media (max-width: 640px) {
+    //height: 80vh;
+  }
 
   &:after {
     content: "";
@@ -65,7 +73,7 @@ a {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 8vh;
+    height: 100vh;
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 5%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 5%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    background-size: 100%;
@@ -75,18 +83,70 @@ a {
 
 #mondo_img {
   -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+  //-webkit-backface-visibility: hidden;
   width: 100%;
-  transform: rotateX(-70deg);
+  transform: rotateX(-70deg) rotateZ(1deg) rotateY(0deg);
+  position: relative;
+  z-index: 10;
 }
+
+#content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1em 9em 1em 2em;
+    font-size: 3vw;
+    margin: 0;
+    z-index: 1001;
+
+    h1 {
+      font-size: 4.5vw;
+      margin-right: 1em;
+      margin-bottom: 100vh;
+      font-weight: normal;
+    }
+
+    p {
+      margin-bottom: 2em;
+    }
+
+    ul {
+      line-height: 1.8em;
+      margin-bottom: 100vh;
+      list-style: none;
+    }
+    
+    color: black;
+    text-align: left;
+  }
 
 #scroller {
-  height: 10000vh;
+  position: relative;
+  height: 3000vh;
+  z-index: 1000;
+  
+  //perspective: 100vw;
+  @media (max-width: 640px) {
+    height: 5000vh;
+  }
 }
 
-img,
-.mondo_1,
+strong {
+  font-family: $mondo-font;
+}
+
+.mondo_1 {
+  color: blue;
+}
+
 .mondo_2 {
+  color: blue;
+}
+
+.mondo_1,
+.mondo_2,
+.mondo_3 {
+  font-family: $mondo-font;
   position: absolute;
   left: 50%;
   top: 0;
@@ -94,10 +154,49 @@ img,
   transform-origin: center;
   width: 100%;
   height: 100vh;
-  -webkit-backface-visibility: hidden;
+  //-webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   outline: 1px solid transparent;
   font-size: 80vh;
   line-height: 1.525em;
-  -webkit-font-smoothing: antialiased;
+  z-index: 10;
+
+  @media (max-width: 640px) {
+    top: 50vh;
+    height: 50vh;
+    line-height: 0.8em;
+  }
+}
+
+
+.mail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+img {
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+nav {
+  button {
+    position: fixed;
+    top: 4vw;
+    right: 4vw;
+    width: 32px;
+    height: 32px;
+    border-radius: 2vw;
+    background: black;
+    appearance: none;
+    border: 0;
+    z-index: 1000;
+  }
 }

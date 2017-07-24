@@ -1,0 +1,28 @@
+<form id="button" action="/your-server-side-code" method="POST">
+
+</form>
+
+<script src="https://checkout.quaderno.io/checkout.js"></script><button id="QuadernoCheckoutButton-1500813284">Pay now</button><script>var handler=QuadernoCheckout.configure({key:"pk_live_5zgzFsFGh14m8iyyA-ow",locale:"en",color:"#4c7800",callback:function(data) {if (data.gateway != 'paypal') {window.location = "";} else {action_url = QuadernoCheckout.apiURL();paypal_data = JSON.parse(data.paypal_data);paypal_data.transaction.redirect_url = "" ;var form = document.createElement("form");form.setAttribute("method", "POST");form.setAttribute("action", action_url);form.setAttribute("enctype", "application/json");var hiddenField = document.createElement("input");hiddenField.setAttribute("type", "hidden");hiddenField.setAttribute("name", "paypal_data");hiddenField.setAttribute("value", JSON.stringify(paypal_data));form.appendChild(hiddenField);document.body.appendChild(form);form.submit();}}});document.querySelector("#QuadernoCheckoutButton-1500813284").addEventListener("click",function(e){handler.open({gateway:"stripe",type:"subscription",taxes:"excluded",country:"DE",plan:"Portfolio",transaction_type:"",currency:"EUR",billing_address: true,amount:"12500"});e.preventDefault();});</script>
+
+<script type="text/javascript">
+
+$(function() {
+
+  var $button = $("<script>");
+  $button.attr('src', 'https://checkout.stripe.com/checkout.js')
+  $button.attr('data-key', 'pk_live_VmRsuxoud6VC5yH1hnFTMi71');
+  $button.attr('data-image', 'https://stripe.com/img/documentation/checkout/marketplace.png');
+  $button.attr('data-name', 'MONDO Minisite');
+  $button.attr('data-description', "€50 / mo. (you won't be charged yet)");
+  $button.attr('data-panel-label', 'Request');
+  $button.attr('data-label', 'Request');
+  $button.attr('data-amount', '0000');
+  $button.attr('data-billing-address', true);
+  $button.attr('data-allow-remember-me', false);
+  $button.addClass('stripe-button');
+
+  $("#button").append($button);
+
+});
+
+</script>
