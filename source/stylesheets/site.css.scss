@@ -15,7 +15,7 @@
 $mondo-font: 'UniversLTStd-XBlackEx', 'Univers', -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", sans-serif;
 
-$normal-font: "Avenir Next", "Avenir",
+$normal-font: "Assistant", "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", sans-serif;
 
 body {
@@ -46,6 +46,8 @@ body {
 a {
   color: black;
   cursor: url(../images/cursor_hover.png) 16 16, pointer;
+  text-decoration: none;
+  border-bottom: 0.05em solid black;
   &:hover {
     color: red;
   }
