@@ -1,0 +1,81 @@
+<!-- 
+88b           d88   ,ad8888ba,   888b      88 88888888ba,     ,ad8888ba,    
+888b         d888  d8"'    `"8b  8888b     88 88      `"8b   d8"'    `"8b   
+88`8b       d8'88 d8'        `8b 88 `8b    88 88        `8b d8'        `8b  
+88 `8b     d8' 88 88          88 88  `8b   88 88         88 88          88  
+88  `8b   d8'  88 88          88 88   `8b  88 88         88 88          88  
+88   `8b d8'   88 Y8,        ,8P 88    `8b 88 88         8P Y8,        ,8P  
+88    `888'    88  Y8a.    .a8P  88     `8888 88      .a8P   Y8a.    .a8P   
+88     `8'     88   `"Y8888Y"'   88      `888 88888888Y"'     `"Y8888Y"'    
+
+ -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png">
+
+    <title>MONDO</title>
+
+    <meta property="og:image" content="http://mondo.ltd/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+    <link href="stylesheets/site.css" rel="stylesheet">
+    <script src="javascripts/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <!-- <nav>
+      <button></button>
+    </nav> -->
+
+    <form id="button" action="/your-server-side-code" method="POST">
+
+</form>
+
+<script src="https://checkout.quaderno.io/checkout.js"></script><button id="QuadernoCheckoutButton-1500813284">Pay now</button><script>var handler=QuadernoCheckout.configure({key:"pk_live_5zgzFsFGh14m8iyyA-ow",locale:"en",color:"#4c7800",callback:function(data) {if (data.gateway != 'paypal') {window.location = "";} else {action_url = QuadernoCheckout.apiURL();paypal_data = JSON.parse(data.paypal_data);paypal_data.transaction.redirect_url = "" ;var form = document.createElement("form");form.setAttribute("method", "POST");form.setAttribute("action", action_url);form.setAttribute("enctype", "application/json");var hiddenField = document.createElement("input");hiddenField.setAttribute("type", "hidden");hiddenField.setAttribute("name", "paypal_data");hiddenField.setAttribute("value", JSON.stringify(paypal_data));form.appendChild(hiddenField);document.body.appendChild(form);form.submit();}}});document.querySelector("#QuadernoCheckoutButton-1500813284").addEventListener("click",function(e){handler.open({gateway:"stripe",type:"subscription",taxes:"excluded",country:"DE",plan:"Portfolio",transaction_type:"",currency:"EUR",billing_address: true,amount:"12500"});e.preventDefault();});</script>
+
+<script type="text/javascript">
+
+$(function() {
+
+  var $button = $("<script>");
+  $button.attr('src', 'https://checkout.stripe.com/checkout.js')
+  $button.attr('data-key', 'pk_live_VmRsuxoud6VC5yH1hnFTMi71');
+  $button.attr('data-image', 'https://stripe.com/img/documentation/checkout/marketplace.png');
+  $button.attr('data-name', 'MONDO Minisite');
+  $button.attr('data-description', "€50 / mo. (you won't be charged yet)");
+  $button.attr('data-panel-label', 'Request');
+  $button.attr('data-label', 'Request');
+  $button.attr('data-amount', '0000');
+  $button.attr('data-billing-address', true);
+  $button.attr('data-allow-remember-me', false);
+  $button.addClass('stripe-button');
+
+  $("#button").append($button);
+
+});
+
+</script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101174365-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
