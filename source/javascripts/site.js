@@ -16,6 +16,7 @@ var per = 0
 var velocity = 0
 var looping = false
 var offset = 0
+var wheel = 0
 
 function loop() {
   el = document.body
@@ -28,7 +29,7 @@ function loop() {
     offset -= 0.05
     velocity *= 0.8
 
-    per = scrollTop / 4 / (el.offsetHeight - window.innerHeight)
+    // per = wheel
 
     // if (per >= 0.5526075141267308) {
     //   //console.log(per);
@@ -39,7 +40,9 @@ function loop() {
 
     var minus = 550 * per
     var rotate = 280 * per
-    var y = -200 * per + offset
+    var y = -200 * per + offset + wheel
+
+    console.log(y)
 
     mondo.style.transform =
       'rotateX(-70deg) rotateZ(' + (1 - velocity) + 'deg) rotateY(0deg)'
@@ -51,9 +54,9 @@ function loop() {
       'vh) scale3d(8,1,1) rotateZ(90deg) rotateY(-90deg)'
     img2.style.transform =
       'translate3d(-50%,' +
-      (-y + 2) +
+      (-y - 220) +
       'vh,' +
-      (720 - minus) +
+      (280 - minus) +
       'vh) scale3d(8,1,1) rotateZ(90deg) rotateY(-90deg)'
     // text.style.transform = 'translate3d(0,' + y * 500 + 'px,0)'
 
@@ -73,6 +76,7 @@ var handleScroll = function (evt) {
   if (!evt) evt = event
   var direction = evt.detail < 0 || evt.wheelDelta > 0 ? 1 : -1
   velocity += evt.wheelDelta * 0.00025
+  wheel += evt.wheelDelta * 0.01
 }
 document.addEventListener('DOMMouseScroll', handleScroll, false) // for Firefox
 document.addEventListener('mousewheel', handleScroll, false)
