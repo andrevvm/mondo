@@ -16,7 +16,7 @@ $mondo-font: 'UniversLTStd-XBlackEx', 'Univers', -apple-system,
   BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande',
   'Helvetica Neue', 'Helvetica', sans-serif;
 
-$normal-font: 'Helvetica', sans-serif;
+$normal-font: 'ABC Whyte Unlicensed Trial', 'Helvetica', sans-serif;
 
 body {
   color: white;
@@ -232,16 +232,17 @@ nav {
   color: black;
   border-radius: 3px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
   padding: 0.33em 0.66em;
   font-weight: 600;
   z-index: 1000;
+  letter-spacing: 0.05em;
 }
 
 @media screen and (max-width: 640px) {
   .contact {
-    font-size: 11px;
+    font-size: 10px;
     right: auto;
     left: 50%;
     transform: translateX(-50%);
