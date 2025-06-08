@@ -65,7 +65,7 @@ cp -R "$TEMP_DIR"/* .
 touch .nojekyll
 
 # Add a CNAME file
-echo "mondo.studio" > CNAME
+echo "mondo.ltd" > CNAME
 
 # Add all files and commit
 echo "📝 Committing changes..."
