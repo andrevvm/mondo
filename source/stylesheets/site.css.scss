@@ -223,9 +223,8 @@ nav {
 
 .contact {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 1em;
+  bottom: 1em;
+  right: 1em;
   background: white;
   color: black;
   border-radius: 3px;
@@ -234,6 +233,15 @@ nav {
   padding: 0.33em 0.66em;
   font-weight: 600;
   z-index: 1000;
+}
+
+@media screen and (max-width: 640px) {
+  .contact {
+    font-size: 11px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .contact:hover {
