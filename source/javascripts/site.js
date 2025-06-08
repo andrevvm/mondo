@@ -22,10 +22,10 @@ function loop() {
   img4 = document.querySelector('.mondo_4')
   window.requestAnimationFrame(function () {
     if (
-      window.scrollY >=
-      window.document.body.scrollHeight - window.innerHeight
+      window.document.body.scrollTop >=
+      window.document.body.scrollHeight - window.document.body.offsetHeight
     ) {
-      window.scrollTo({
+      window.document.body.scrollTo({
         top: 0,
         behavior: 'instant',
       })
