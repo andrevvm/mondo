@@ -64,6 +64,9 @@ cp -R "$TEMP_DIR"/* .
 # Add a .nojekyll file to bypass Jekyll processing
 touch .nojekyll
 
+# Add a CNAME file
+echo "mondo.studio" > CNAME
+
 # Add all files and commit
 echo "📝 Committing changes..."
 git add .
