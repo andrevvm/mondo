@@ -19,6 +19,12 @@
   font-style: normal;
 }
 
+:root {
+  --color-primary: blue;
+  --color-hover: blue;
+  --color-secondary: #ffffff;
+}
+
 $mondo-font: 'UniversLTStd-XBlackEx', 'Univers', -apple-system,
   BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande',
   'Helvetica Neue', 'Helvetica', sans-serif;
@@ -27,12 +33,12 @@ $normal-font: 'ABC Walter Alte Unlicensed Trial', 'ABC Whyte Unlicensed Trial',
   'Helvetica', sans-serif;
 
 body {
-  color: white;
+  color: var(--color-secondary);
   font-family: $normal-font;
   padding: 0;
   margin: 0;
   text-align: center;
-  background-color: black;
+  background-color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,13 +52,13 @@ html {
 }
 
 ::-moz-selection {
-  color: red;
-  background: white;
+  color: var(--color-primary);
+  background: var(--color-secondary);
 }
 
 ::selection {
-  color: red;
-  background: white;
+  color: var(--color-primary);
+  background: var(--color-secondary);
 }
 
 ::-webkit-scrollbar {
@@ -87,20 +93,11 @@ a {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: -moz-linear-gradient(
-      top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 40%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 40%
-    ); /* Chrome10-25,Safari5.1-6 */
+
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 40%
+      rgba(0, 0, 255, 1) 0%,
+      rgba(0, 0, 255, 0) 40%
     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     background-size: 100%;
     z-index: 10;
@@ -121,7 +118,7 @@ a {
   scroll-snap-stop: always;
   padding: 0em 13em 0 1.5em;
   font-size: 3vw;
-  color: white;
+  color: var(--color-secondary);
   text-align: left;
   position: relative;
   z-index: 100;
@@ -165,11 +162,11 @@ strong {
 }
 
 .mondo_1 {
-  color: white;
+  color: var(--color-secondary);
 }
 
 .mondo_2 {
-  color: white;
+  color: var(--color-secondary);
 }
 
 .mondo_1,
@@ -225,7 +222,7 @@ nav {
     width: 32px;
     height: 32px;
     border-radius: 2vw;
-    background: black;
+    background: var(--color-primary);
     appearance: none;
     border: 0;
     z-index: 1000;
@@ -236,8 +233,8 @@ nav {
   position: fixed;
   bottom: 1em;
   right: 1em;
-  background: white;
-  color: black;
+  background: var(--color-secondary);
+  color: var(--color-primary);
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 12px;
@@ -257,6 +254,6 @@ nav {
 }
 
 .contact:hover {
-  background: blue;
-  color: white;
+  background: var(--color-hover);
+  color: var(--color-secondary);
 }
