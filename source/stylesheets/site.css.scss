@@ -12,11 +12,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'ABC Walter Alte Unlicensed Trial';
+  src: url('../fonts/ABCWalterAlte-Rauchwaren-Trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $mondo-font: 'UniversLTStd-XBlackEx', 'Univers', -apple-system,
   BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande',
   'Helvetica Neue', 'Helvetica', sans-serif;
 
-$normal-font: 'ABC Whyte Unlicensed Trial', 'Helvetica', sans-serif;
+$normal-font: 'ABC Walter Alte Unlicensed Trial', 'ABC Whyte Unlicensed Trial',
+  'Helvetica', sans-serif;
 
 body {
   color: white;
