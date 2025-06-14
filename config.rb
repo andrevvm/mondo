@@ -12,6 +12,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/logo.html', layout: 'logo'
 
 # Deploy configuration removed due to incompatibility with Middleman 4.2+
 # Use the deployment script (./deploy.sh) or GitHub Actions instead
