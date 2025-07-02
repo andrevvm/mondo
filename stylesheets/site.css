@@ -187,6 +187,7 @@ nav button {
   right: 1em;
   background: var(--color-secondary);
   color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 12px;
@@ -205,4 +206,5 @@ nav button {
 
 .contact:hover {
   background: var(--color-hover);
-  color: var(--color-secondary); }
+  color: var(--color-secondary);
+  border-color: var(--color-secondary); }
